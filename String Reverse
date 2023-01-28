@@ -1,0 +1,34 @@
+fun main(args: Array<String>) {
+    val str = readLine()
+
+    var result = str?.reversed()
+    println(result)
+}
+
+
+//or
+import java.util.Scanner
+fun reverse(str: String): String {
+    val chars: CharArray = str.toCharArray()
+ 
+    var l = 0
+    var h = str.length - 1
+    while (l < h)
+    {
+        val c = chars[l]
+        chars[l] = chars[h]
+        chars[h] = c
+        l++; h--;
+    }
+ 
+    return String(chars)
+}
+ 
+fun main() {
+ val reader = Scanner(System.`in`)
+  var str:String = reader.nextLine()
+ 
+    var reverse = reverse(str)
+ 
+    println(reverse)        // olleH
+}
